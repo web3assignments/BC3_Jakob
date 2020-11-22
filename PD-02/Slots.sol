@@ -2,27 +2,29 @@ pragma solidity ^0.5.11;
 
 contract Slots {
     
-    uint256 public ContractBalance;
-    
-    
-    function StartGame() public payable {
-        uint256 playerBalance = msg.value;
-        require(playerBalance > 0, "Balance to low");
-        uint RandomValue = random();
-        ContractBalance = address(this).balance;
-        
+    function StartGame(uint256 amount) public payable {
+        require(msg.value == amount);
+        require(msg.value > 0, "Balance to low");
+        uint256 playerBalance = amount;
+        uint RandomValue = Random();
+       
         if(RandomValue > 50){
             uint256 WinBalance = playerBalance * 2;
-            if(ContractBalance < WinBalance){
-                WinBalance = ContractBalance;
+            if(ContractBalance() < WinBalance){
+                WinBalance = ContractBalance();
             }
             msg.sender.transfer(WinBalance);
-            ContractBalance = address(this).balance;
         }
-        
+      
     }
     
-    function random() public view returns (uint) {
-        return uint(keccak256(abi.encodePacked(now, block.timestamp)))%100;
+    function Random() public view returns (uint) {
+        return uint(keccak256(abi.encodePacked(block.timestamp)))%100;
     }
+    
+    function ContractBalance() public view returns (uint){
+        return address(this).balance;
+    }
+    
+    
 }
