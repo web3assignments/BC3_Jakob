@@ -5,10 +5,16 @@ contract Slots {
     mapping(address => uint[])  playerList;
     uint[] Numbers;
 
+
+    // Setup an intial amount for the bank, supplied during the creation of the contract.    
+    constructor() public payable {
+    }
+
+    event Won(bool win, uint256 WinAmount);  
     
-    function StartGame(uint256 amount) public payable {
-        require(msg.value == amount);
+    function StartGame() public payable {
         require(msg.value > 0, "Balance to low");
+        uint256 amount = msg.value;
         delete Numbers;
         uint256 playerBalance = amount;
         //NOT random until oracalized for now they produce 3 times the same random number
@@ -78,7 +84,7 @@ contract Slots {
     }
     
     function Random() public view returns (uint) {
-        return uint(keccak256(abi.encodePacked(now)))%23;
+        return uint(keccak256(abi.encodePacked(block.timestamp)))%23;
     }
     
     function ContractBalance() public view returns (uint){
@@ -87,10 +93,12 @@ contract Slots {
     
     function CalculateWinnings(uint Pbalance, uint Multiplier) private {
         uint256 WinBalance = Pbalance * Multiplier;
+        bool win = true;
         if(ContractBalance() < WinBalance){
             WinBalance = ContractBalance();
             }
         msg.sender.transfer(WinBalance);
+        emit Won(win, WinBalance);
         }
         
     function getNumbers() public view returns(uint[] memory) {
