@@ -1,0 +1,59 @@
+main{
+    border-radius: 25px;
+	background-color: rgba(2, 149, 137, 0.5);
+	margin-top: 5%;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-left: 15px;
+	padding-right: 15px;
+	margin-left: calc((100% - 550px) / 2);
+    width: 550px;
+    height: 500px;
+}
+
+.wrapper {
+    text-align: center;
+	top: 100%;
+	
+}
+
+.titel {
+	position: auto;
+	text-align: center;
+}
+
+.primary{
+    position: auto;
+    margin-top: 65%;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-radius: 15px;
+	text-align: center;
+    background-color: rgba(0, 0, 0);
+    color: rgb(255, 255, 255);
+	font-size: 25px;
+}
+
+section#informatie{
+    margin-left: 70%;
+	width: 200px;
+	margin-top: -35%;
+	padding-top: 5px;
+	border-radius: 5px;
+	background-color: transparent;
+    color: #000000;   
+
+}
+
+section#betinfo{
+    margin-left: 0%;
+	width: 200px;
+	margin-top: -80%;
+	padding-top: 5px;
+	border-radius: 5px;
+	background-color: transparent;
+    color: #000000;   
+
+}
+
+

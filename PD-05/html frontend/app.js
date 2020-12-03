@@ -1,4 +1,4 @@
-const Slotsaddress="0x6A15d9336Fd6ee10788CfA7665310dDD13F42309"
+const Slotsaddress="0xC7D0a026678437dFc271D1fb6202b6aaF7D3331f"
 const SlotsAbi=[
 	{
 		"anonymous": false,
@@ -91,7 +91,7 @@ function logEvents(str,...arguments){
     var logstr=arguments.toString();
     document.getElementById("log").innerHTML +=str+" "+logstr+"\n";
 }
-
+var getal1;
 async function Play(){
     const SlotsContract = new web3.eth.Contract(SlotsAbi, Slotsaddress);
     var betAmount = document.getElementById("bet").value;
@@ -99,17 +99,18 @@ async function Play(){
     logEvents(`Betting: ${Round(betAmount)} ETH`);
     var result =  await SlotsContract.methods.StartGame().send({from: accounts[0], value:betAmountWei});
     var gasprice= await web3.eth.getGasPrice()   
-    var Numbers = await SlotsContract.methods.getNumbers.call();
-    logEvents(`Your numbers this spin: ${Numbers[3]}`);
+	var Numbers = await SlotsContract.methods.getNumbers().call({from: accounts[0]});
+	logEvents(`Your numbers this spin: ${Numbers}`);
+	
+	
     logEvents(`Gas used: ${Round(web3.utils.fromWei( (result.gasUsed*gasprice).toString(), 'ether'))} ETH`);    
     var win = result.events.Won.returnValues['win'];
     var winAmount = Round(web3.utils.fromWei(result.events.Won.returnValues['WinAmount'].toString(), 'ether'));
     if (win)
         logEvents(`You won: ${winAmount} ETH!`);
     else
-        logEvents(`You lost: ${betAmount} ETH, but thats life!`);
-}   
-    
+		logEvents(`You lost: ${betAmount} ETH, but thats life!`);
+}
 
 async function UpdateBalances(){
     var weiBalance= await web3.eth.getBalance(accounts[0])
@@ -131,5 +132,6 @@ async function asyncloaded() {
         accounts=await web3.eth.getAccounts();            
 
         UpdateBalances(); 
-    }     
+	}     
+
 window.addEventListener('load', asyncloaded); 
