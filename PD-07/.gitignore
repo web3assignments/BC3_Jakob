@@ -1,0 +1,4 @@
+**/node_modules/*
+mnemonic/package-lock.json	
+truffle/.infura
+truffle/.secret
