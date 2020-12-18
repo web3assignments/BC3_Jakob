@@ -4,8 +4,9 @@ var Slots = artifacts.require("slots");
 var Oracle = artifacts.require("Oracle");
 
 module.exports = async function (deployer) {
-    const Oralacle = await deployer.deploy(Oracle);
+    await deployer.deploy(Oracle);
     const SlotsS = await deployProxy(Slots, [] ,{ deployer, initializer: 'initialize' });
-    console.log(`Address of Oracle contract: ${Oralacle.address}`);
-    console.log(`Address of Slots contract: ${SlotsS.address}`);
+    console.log("Doing some tests:")
+    var Amount = await SlotsS.ContractBalance();
+    console.log(`Current contract balance ${Amount}`);
 }

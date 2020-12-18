@@ -7,7 +7,7 @@ pragma solidity ^0.6.0;
 
 import "@openzeppelin/upgrades-core/contracts/Initializable.sol";
 
-contract Slots is Initializable {
+contract SlotsV2 is Initializable {
     address public OracleAdress;
     address private owner;
     mapping(address => uint[])  playerList;
@@ -26,12 +26,12 @@ contract Slots is Initializable {
     }
 
     function CallOracle() public returns (bytes32){
-        Oracle2 o = Oracle2(OracleAdress);
+        OracleV3 o = OracleV3(OracleAdress);
         return o.getRandomNumber();
     }
 
     function ReturnOracleNumber() public returns (uint256){
-        Oracle2 o = Oracle2(OracleAdress);
+        OracleV3 o = OracleV3(OracleAdress);
         return o.returnNumber();  
     }
         
@@ -104,7 +104,7 @@ contract Slots is Initializable {
     /// @notice Shows the bankbalance 
     /// @return Balance of the contract in wei
     function ContractBalance() public view returns (uint){
-        return address(this).balance;
+        return (address(this).balance + 10);
     }
     
     function CalculateWinnings(uint Pbalance, uint Multiplier) private {
@@ -153,7 +153,7 @@ contract Slots is Initializable {
     */
 }
 
-interface Oracle2{
+interface OracleV3{
     function getRandomNumber() external returns (bytes32);
     function returnNumber() external returns (uint256);
 }
