@@ -1,0 +1,8 @@
+{
+  "devDependencies": {
+    "truffle-plugin-verify": "git://github.com/rkalis/truffle-plugin-verify.git#v0.5.3"
+  },
+  "dependencies": {
+    "truffle": "^5.1.58"
+  }
+}
