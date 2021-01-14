@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/web3@latest/dist/web3.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<html>
+<body>
+<main>
+<div class="logo">
+    <img src="Images/slotslogo.png" id='Logo'>
+</div>
+<div class="main">
+    <div class="imain">
+        <div class="SlotsContent">
+            <section id='Slots'>
+                <div id='slot1' class='a1'>Slot1</div>
+                <div id='slot2' class='a1'>Slot2</div>
+                <div id='slot3' class='a1'>Slot3</div>
+            </section>
+            <div class="wrapper">
+                <input type="button" id="play" value="Spin Now!" onclick="Play()"/>
+                <input type="button" id="GRN" value="Get Random Number!" onclick="getNumber()"/>
+            </div>
+        </div>
+    </div>
+
+    <div class="betinfo">
+        <p><img src="./Images/balance.png" id="p1">
+        <input type="text" name="balance" id="balance" placeholder="ETH" /></p> 
+        <p><img src="./Images/bank.png" id="p2">
+        <input type="text" name="bank" id="bank" placeholder="ETH" /></p>
+        <p><img src="./Images/bet.png" id="p3">
+        <input type="text" name="bet" id="bet" placeholder="ETH" /></p> 
+    </div>
+
+
+    <div class='info'>
+        <section id="informatie">
+            <pre id="log"></pre> 
+        </section>
+    </div>
+</div>    
+</main>
+</body>
+
+<script type="text/javascript" src="app.js"></script>
+</html>

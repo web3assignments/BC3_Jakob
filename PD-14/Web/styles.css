@@ -1,0 +1,102 @@
+.main{
+    display: flex;
+    border: 1px solid black;
+    
+}
+
+.imain{
+    border-radius: 25px;
+	background-color: rgba(255, 255, 255, 0.5);
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-left: 15px;
+	padding-right: 15px;
+	margin-left: calc((100% - 550px) / 2);
+    width: 550px;
+    height: 500px;
+	border: 5px solid red;
+}
+
+.info{
+    position: absolute;
+    float:left;
+    border: 5px solid green;
+    height: 540px;
+
+}
+
+.betinfo{
+    border: 5px solid blue;
+    height: 540px; 
+    margin-left: auto;
+    
+}
+
+#Logo{
+    width: auto;
+    height: 175px;
+    border: 1px solid green
+}
+
+.logo{
+    margin-left: calc((100% - 175px) / 2);
+}
+
+#balance, #bank, #bet{
+    margin: 10px;
+    float:right;
+}
+
+#Slots{
+    justify-content: center;
+    border: 5px solid purple;  
+    display: inline-flex;
+    position: absolute;
+    left: 50%;
+    width: 500px;
+    height: 250px;
+    margin-left: -235px;
+    margin-top:-15%
+    
+}
+
+#slot1,#slot2,#slot3{
+    margin:50px;
+}
+
+.wrapper {
+    margin-top:60%;
+    border: 1px solid black;
+    text-align: center;
+}
+
+
+#p1,#p2,#p3{
+    width: 30px;
+    height: 30px;
+}
+
+#play{
+    position: absolute;
+	padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: -70px;
+    border-radius: 15px;
+    margin-right: -25%;
+	text-align: center;
+    background-color: rgba(0, 0, 0);
+    color: rgb(255, 255, 255);
+    font-size: 25px;    
+}
+
+#GRN{
+    position: absolute;
+	padding-top: 10px;
+	padding-bottom: 10px;
+    border-radius: 15px;
+    margin-left: -130px;
+	text-align: center;
+    background-color: rgba(0, 0, 0);
+    color: rgb(255,255,0);
+    font-size: 25px;
+}
