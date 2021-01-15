@@ -58,42 +58,43 @@
       "outputs": [
         {
           "internalType": "uint256",
-          "name": "Number",
+          "name": "",
           "type": "uint256"
         }
       ],
-      "stateMutability": "nonpayable",
-      "type": "function"
+      "stateMutability": "view",
+      "type": "function",
+      "constant": true
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.6.12+commit.27d51765\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"stateMutability\":\"payable\",\"type\":\"constructor\"},{\"inputs\":[],\"name\":\"Number\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getRandomNumber\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"requestId\",\"type\":\"bytes32\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"requestId\",\"type\":\"bytes32\"},{\"internalType\":\"uint256\",\"name\":\"randomness\",\"type\":\"uint256\"}],\"name\":\"rawFulfillRandomness\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"returnNumber\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"Number\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"getRandomNumber()\":{\"details\":\"Make sure there is enough LINK on the contract for oracle call\",\"returns\":{\"requestId\":\"the call id for the oracle\"}}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"getRandomNumber()\":{\"notice\":\"Calls chainlink oracle for random numbers\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/C/Users/Lord R/Documents/GitHub/BC3_Jakob/PD-14/contracts/Oracle.sol\":\"Oracle\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/Users/Lord R/Documents/GitHub/BC3_Jakob/PD-14/contracts/LinkTokenInterface.sol\":{\"keccak256\":\"0x2cfb2a7f29a520806764aee6fa556fd2f8dc878bdcc9fc99bdf80a7a7532e096\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://933079f966e4f37903393a4483a4ab9eee63aa2ca164d447eb18d460b5c087c0\",\"dweb:/ipfs/QmaUdcFTkwpFBvmQTEw336mwUxh197gZDhx1ySK3j6H6F8\"]},\"/C/Users/Lord R/Documents/GitHub/BC3_Jakob/PD-14/contracts/Oracle.sol\":{\"keccak256\":\"0x3af7bccad6ae13f585846828b5a91b5afc3d9542c58ba10421246d4346839d39\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://81cae123d36003af9e870cfe19546bf07927daa02e07c97680f6e7ee16e0496a\",\"dweb:/ipfs/QmcCX9FWuLYdq5xF5fcZETzhttkd9kVbjsMhVYYySuEeNn\"]},\"/C/Users/Lord R/Documents/GitHub/BC3_Jakob/PD-14/contracts/SafeMathChainlink.sol\":{\"keccak256\":\"0xb2112da59e8116a645a6a39b4e2cdecf9fa04a088303d5035656977a5d41bf20\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://ec0f116824dcc23c1675c3e290780fdb5e003beb0cdd05e78b71c39cc829a72e\",\"dweb:/ipfs/QmdGFsJVKbpBXDZmGUE8er2dh9arnD22ZpaTNWuGsUhzSg\"]},\"/C/Users/Lord R/Documents/GitHub/BC3_Jakob/PD-14/contracts/VRFConsumerBase.sol\":{\"keccak256\":\"0x258eb3e0530f4a9a61bb71f834ff5a4cd022687615b9adff1e8b8ed8e3b17ff9\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://da966d938083263cf16fcb6f55ef7a53f768e69f6631ffe32de421090d142ca8\",\"dweb:/ipfs/QmWhx85PMsAw7LnuTHJQGwRVFFhPd7Fzbm2Bk2UVQiJ6q2\"]},\"/C/Users/Lord R/Documents/GitHub/BC3_Jakob/PD-14/contracts/VRFRequestIDBase.sol\":{\"keccak256\":\"0xcd103ea3542a7cb7fcac4b09a50122481ac142bc19d0fdfe723da8e7137ef172\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://e03efcba11edad5c6f9d2dfa2066b5cbcdc5cc23830ea3d0cc62403601f45bf0\",\"dweb:/ipfs/QmPxdNznzMrSD58tTLAZ2dtjSCZgg111mdjzdpAtT9WoBA\"]}},\"version\":1}",
-  "bytecode": "0x60c060405273b3dccb4cf7a26f6cf6b120cf5a73875b7bbc655b7301be23585060835e02b77ef475b0cc51aa1e07098173ffffffffffffffffffffffffffffffffffffffff1660a08173ffffffffffffffffffffffffffffffffffffffff1660601b815250508073ffffffffffffffffffffffffffffffffffffffff1660808173ffffffffffffffffffffffffffffffffffffffff1660601b8152505050507f2ed0feb3e7fd2022120aa84fab1945545a9f2ffc9076fd6156fa96eaff4c131160001b60018190555067016345785d8a000060028190555060805160601c60a05160601c6106a56101096000398060f0528061036a5250806101c4528061032e52506106a56000f3fe608060405234801561001057600080fd5b506004361061004c5760003560e01c80633450bd6a14610051578063624de7251461006f57806394985ddd1461008d578063dbdff2c1146100c5575b600080fd5b6100596100e3565b6040518082815260200191505060405180910390f35b6100776100e8565b6040518082815260200191505060405180910390f35b6100c3600480360360408110156100a357600080fd5b8101908080359060200190929190803590602001909291905050506100ee565b005b6100cd6101bd565b6040518082815260200191505060405180910390f35b600090565b60035481565b7f000000000000000000000000000000000000000000000000000000000000000073ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff16146101af576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252601f8152602001807f4f6e6c7920565246436f6f7264696e61746f722063616e2066756c66696c6c0081525060200191505060405180910390fd5b6101b9828261031f565b5050565b60006002547f000000000000000000000000000000000000000000000000000000000000000073ffffffffffffffffffffffffffffffffffffffff166370a08231306040518263ffffffff1660e01b8152600401808273ffffffffffffffffffffffffffffffffffffffff16815260200191505060206040518083038186803b15801561024957600080fd5b505afa15801561025d573d6000803e3d6000fd5b505050506040513d602081101561027357600080fd5b810190808051906020019092919050505010156102db576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252602b815260200180610645602b913960400191505060405180910390fd5b60004340604051602001808281526020019150506040516020818303038152906040528051906020012060001c90506103196001546002548361032a565b91505090565b806003819055505050565b60007f000000000000000000000000000000000000000000000000000000000000000073ffffffffffffffffffffffffffffffffffffffff16634000aea07f000000000000000000000000000000000000000000000000000000000000000085878660405160200180838152602001828152602001925050506040516020818303038152906040526040518463ffffffff1660e01b8152600401808473ffffffffffffffffffffffffffffffffffffffff16815260200183815260200180602001828103825283818151815260200191508051906020019080838360005b83811015610423578082015181840152602081019050610408565b50505050905090810190601f1680156104505780820380516001836020036101000a031916815260200191505b50945050505050602060405180830381600087803b15801561047157600080fd5b505af1158015610485573d6000803e3d6000fd5b505050506040513d602081101561049b57600080fd5b81019080805190602001909291905050505060006104cd8584306000808a81526020019081526020016000205461051f565b90506104f560016000808881526020019081526020016000205461058390919063ffffffff16565b60008087815260200190815260200160002081905550610515858261060b565b9150509392505050565b600084848484604051602001808581526020018481526020018373ffffffffffffffffffffffffffffffffffffffff1681526020018281526020019450505050506040516020818303038152906040528051906020012060001c9050949350505050565b600080828401905083811015610601576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252601b8152602001807f536166654d6174683a206164646974696f6e206f766572666c6f77000000000081525060200191505060405180910390fd5b8091505092915050565b6000828260405160200180838152602001828152602001925050506040516020818303038152906040528051906020012090509291505056fe4e6f7420656e6f756768204c494e4b202d2066696c6c20636f6e7472616374207769746820666175636574a2646970667358221220a70cce4442f6ece55e95e89818801842d66ef734fc4ab7104552d6c40fc7a1c364736f6c634300060c0033",
-  "deployedBytecode": "0x608060405234801561001057600080fd5b506004361061004c5760003560e01c80633450bd6a14610051578063624de7251461006f57806394985ddd1461008d578063dbdff2c1146100c5575b600080fd5b6100596100e3565b6040518082815260200191505060405180910390f35b6100776100e8565b6040518082815260200191505060405180910390f35b6100c3600480360360408110156100a357600080fd5b8101908080359060200190929190803590602001909291905050506100ee565b005b6100cd6101bd565b6040518082815260200191505060405180910390f35b600090565b60035481565b7f000000000000000000000000000000000000000000000000000000000000000073ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff16146101af576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252601f8152602001807f4f6e6c7920565246436f6f7264696e61746f722063616e2066756c66696c6c0081525060200191505060405180910390fd5b6101b9828261031f565b5050565b60006002547f000000000000000000000000000000000000000000000000000000000000000073ffffffffffffffffffffffffffffffffffffffff166370a08231306040518263ffffffff1660e01b8152600401808273ffffffffffffffffffffffffffffffffffffffff16815260200191505060206040518083038186803b15801561024957600080fd5b505afa15801561025d573d6000803e3d6000fd5b505050506040513d602081101561027357600080fd5b810190808051906020019092919050505010156102db576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252602b815260200180610645602b913960400191505060405180910390fd5b60004340604051602001808281526020019150506040516020818303038152906040528051906020012060001c90506103196001546002548361032a565b91505090565b806003819055505050565b60007f000000000000000000000000000000000000000000000000000000000000000073ffffffffffffffffffffffffffffffffffffffff16634000aea07f000000000000000000000000000000000000000000000000000000000000000085878660405160200180838152602001828152602001925050506040516020818303038152906040526040518463ffffffff1660e01b8152600401808473ffffffffffffffffffffffffffffffffffffffff16815260200183815260200180602001828103825283818151815260200191508051906020019080838360005b83811015610423578082015181840152602081019050610408565b50505050905090810190601f1680156104505780820380516001836020036101000a031916815260200191505b50945050505050602060405180830381600087803b15801561047157600080fd5b505af1158015610485573d6000803e3d6000fd5b505050506040513d602081101561049b57600080fd5b81019080805190602001909291905050505060006104cd8584306000808a81526020019081526020016000205461051f565b90506104f560016000808881526020019081526020016000205461058390919063ffffffff16565b60008087815260200190815260200160002081905550610515858261060b565b9150509392505050565b600084848484604051602001808581526020018481526020018373ffffffffffffffffffffffffffffffffffffffff1681526020018281526020019450505050506040516020818303038152906040528051906020012060001c9050949350505050565b600080828401905083811015610601576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252601b8152602001807f536166654d6174683a206164646974696f6e206f766572666c6f77000000000081525060200191505060405180910390fd5b8091505092915050565b6000828260405160200180838152602001828152602001925050506040516020818303038152906040528051906020012090509291505056fe4e6f7420656e6f756768204c494e4b202d2066696c6c20636f6e7472616374207769746820666175636574a2646970667358221220a70cce4442f6ece55e95e89818801842d66ef734fc4ab7104552d6c40fc7a1c364736f6c634300060c0033",
+  "metadata": "{\"compiler\":{\"version\":\"0.6.12+commit.27d51765\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"stateMutability\":\"payable\",\"type\":\"constructor\"},{\"inputs\":[],\"name\":\"Number\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getRandomNumber\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"requestId\",\"type\":\"bytes32\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"requestId\",\"type\":\"bytes32\"},{\"internalType\":\"uint256\",\"name\":\"randomness\",\"type\":\"uint256\"}],\"name\":\"rawFulfillRandomness\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"returnNumber\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"getRandomNumber()\":{\"details\":\"Make sure there is enough LINK on the contract for oracle call\",\"returns\":{\"requestId\":\"the call id for the oracle\"}}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"getRandomNumber()\":{\"notice\":\"Calls chainlink oracle for random numbers\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/C/Users/Lord R/Documents/GitHub/BC3_Jakob/PD-14/contracts/Oracle.sol\":\"Oracle\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/Users/Lord R/Documents/GitHub/BC3_Jakob/PD-14/contracts/LinkTokenInterface.sol\":{\"keccak256\":\"0x2cfb2a7f29a520806764aee6fa556fd2f8dc878bdcc9fc99bdf80a7a7532e096\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://933079f966e4f37903393a4483a4ab9eee63aa2ca164d447eb18d460b5c087c0\",\"dweb:/ipfs/QmaUdcFTkwpFBvmQTEw336mwUxh197gZDhx1ySK3j6H6F8\"]},\"/C/Users/Lord R/Documents/GitHub/BC3_Jakob/PD-14/contracts/Oracle.sol\":{\"keccak256\":\"0x6d662f8de06cd72ece48ad812cda132e3a91bbc5e3c1f3455366d4879b25754c\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://f8bc66b3ca552018dc5365a1035ef6d45d6f8e323ea901a69ea9f6db475f779f\",\"dweb:/ipfs/QmZtS3Fn4SRDn2SGgpBDNrYkwyUnHFjYBu5gjLujLH1Mt3\"]},\"/C/Users/Lord R/Documents/GitHub/BC3_Jakob/PD-14/contracts/SafeMathChainlink.sol\":{\"keccak256\":\"0xb2112da59e8116a645a6a39b4e2cdecf9fa04a088303d5035656977a5d41bf20\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://ec0f116824dcc23c1675c3e290780fdb5e003beb0cdd05e78b71c39cc829a72e\",\"dweb:/ipfs/QmdGFsJVKbpBXDZmGUE8er2dh9arnD22ZpaTNWuGsUhzSg\"]},\"/C/Users/Lord R/Documents/GitHub/BC3_Jakob/PD-14/contracts/VRFConsumerBase.sol\":{\"keccak256\":\"0x258eb3e0530f4a9a61bb71f834ff5a4cd022687615b9adff1e8b8ed8e3b17ff9\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://da966d938083263cf16fcb6f55ef7a53f768e69f6631ffe32de421090d142ca8\",\"dweb:/ipfs/QmWhx85PMsAw7LnuTHJQGwRVFFhPd7Fzbm2Bk2UVQiJ6q2\"]},\"/C/Users/Lord R/Documents/GitHub/BC3_Jakob/PD-14/contracts/VRFRequestIDBase.sol\":{\"keccak256\":\"0xcd103ea3542a7cb7fcac4b09a50122481ac142bc19d0fdfe723da8e7137ef172\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://e03efcba11edad5c6f9d2dfa2066b5cbcdc5cc23830ea3d0cc62403601f45bf0\",\"dweb:/ipfs/QmPxdNznzMrSD58tTLAZ2dtjSCZgg111mdjzdpAtT9WoBA\"]}},\"version\":1}",
+  "bytecode": "0x60c060405273b3dccb4cf7a26f6cf6b120cf5a73875b7bbc655b7301be23585060835e02b77ef475b0cc51aa1e07098173ffffffffffffffffffffffffffffffffffffffff1660a08173ffffffffffffffffffffffffffffffffffffffff1660601b815250508073ffffffffffffffffffffffffffffffffffffffff1660808173ffffffffffffffffffffffffffffffffffffffff1660601b8152505050507f2ed0feb3e7fd2022120aa84fab1945545a9f2ffc9076fd6156fa96eaff4c131160001b60018190555067016345785d8a000060028190555060805160601c60a05160601c6106aa6101096000398060f5528061036f5250806101c9528061033352506106aa6000f3fe608060405234801561001057600080fd5b506004361061004c5760003560e01c80633450bd6a14610051578063624de7251461006f57806394985ddd1461008d578063dbdff2c1146100c5575b600080fd5b6100596100e3565b6040518082815260200191505060405180910390f35b6100776100ed565b6040518082815260200191505060405180910390f35b6100c3600480360360408110156100a357600080fd5b8101908080359060200190929190803590602001909291905050506100f3565b005b6100cd6101c2565b6040518082815260200191505060405180910390f35b6000600354905090565b60035481565b7f000000000000000000000000000000000000000000000000000000000000000073ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff16146101b4576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252601f8152602001807f4f6e6c7920565246436f6f7264696e61746f722063616e2066756c66696c6c0081525060200191505060405180910390fd5b6101be8282610324565b5050565b60006002547f000000000000000000000000000000000000000000000000000000000000000073ffffffffffffffffffffffffffffffffffffffff166370a08231306040518263ffffffff1660e01b8152600401808273ffffffffffffffffffffffffffffffffffffffff16815260200191505060206040518083038186803b15801561024e57600080fd5b505afa158015610262573d6000803e3d6000fd5b505050506040513d602081101561027857600080fd5b810190808051906020019092919050505010156102e0576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252602b81526020018061064a602b913960400191505060405180910390fd5b60004340604051602001808281526020019150506040516020818303038152906040528051906020012060001c905061031e6001546002548361032f565b91505090565b806003819055505050565b60007f000000000000000000000000000000000000000000000000000000000000000073ffffffffffffffffffffffffffffffffffffffff16634000aea07f000000000000000000000000000000000000000000000000000000000000000085878660405160200180838152602001828152602001925050506040516020818303038152906040526040518463ffffffff1660e01b8152600401808473ffffffffffffffffffffffffffffffffffffffff16815260200183815260200180602001828103825283818151815260200191508051906020019080838360005b8381101561042857808201518184015260208101905061040d565b50505050905090810190601f1680156104555780820380516001836020036101000a031916815260200191505b50945050505050602060405180830381600087803b15801561047657600080fd5b505af115801561048a573d6000803e3d6000fd5b505050506040513d60208110156104a057600080fd5b81019080805190602001909291905050505060006104d28584306000808a815260200190815260200160002054610524565b90506104fa60016000808881526020019081526020016000205461058890919063ffffffff16565b6000808781526020019081526020016000208190555061051a8582610610565b9150509392505050565b600084848484604051602001808581526020018481526020018373ffffffffffffffffffffffffffffffffffffffff1681526020018281526020019450505050506040516020818303038152906040528051906020012060001c9050949350505050565b600080828401905083811015610606576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252601b8152602001807f536166654d6174683a206164646974696f6e206f766572666c6f77000000000081525060200191505060405180910390fd5b8091505092915050565b6000828260405160200180838152602001828152602001925050506040516020818303038152906040528051906020012090509291505056fe4e6f7420656e6f756768204c494e4b202d2066696c6c20636f6e7472616374207769746820666175636574a2646970667358221220980160ab1fb975495bcfb9dfe9f0368f0ea1167ca5debb729641455446fe5f5764736f6c634300060c0033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b506004361061004c5760003560e01c80633450bd6a14610051578063624de7251461006f57806394985ddd1461008d578063dbdff2c1146100c5575b600080fd5b6100596100e3565b6040518082815260200191505060405180910390f35b6100776100ed565b6040518082815260200191505060405180910390f35b6100c3600480360360408110156100a357600080fd5b8101908080359060200190929190803590602001909291905050506100f3565b005b6100cd6101c2565b6040518082815260200191505060405180910390f35b6000600354905090565b60035481565b7f000000000000000000000000000000000000000000000000000000000000000073ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff16146101b4576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252601f8152602001807f4f6e6c7920565246436f6f7264696e61746f722063616e2066756c66696c6c0081525060200191505060405180910390fd5b6101be8282610324565b5050565b60006002547f000000000000000000000000000000000000000000000000000000000000000073ffffffffffffffffffffffffffffffffffffffff166370a08231306040518263ffffffff1660e01b8152600401808273ffffffffffffffffffffffffffffffffffffffff16815260200191505060206040518083038186803b15801561024e57600080fd5b505afa158015610262573d6000803e3d6000fd5b505050506040513d602081101561027857600080fd5b810190808051906020019092919050505010156102e0576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252602b81526020018061064a602b913960400191505060405180910390fd5b60004340604051602001808281526020019150506040516020818303038152906040528051906020012060001c905061031e6001546002548361032f565b91505090565b806003819055505050565b60007f000000000000000000000000000000000000000000000000000000000000000073ffffffffffffffffffffffffffffffffffffffff16634000aea07f000000000000000000000000000000000000000000000000000000000000000085878660405160200180838152602001828152602001925050506040516020818303038152906040526040518463ffffffff1660e01b8152600401808473ffffffffffffffffffffffffffffffffffffffff16815260200183815260200180602001828103825283818151815260200191508051906020019080838360005b8381101561042857808201518184015260208101905061040d565b50505050905090810190601f1680156104555780820380516001836020036101000a031916815260200191505b50945050505050602060405180830381600087803b15801561047657600080fd5b505af115801561048a573d6000803e3d6000fd5b505050506040513d60208110156104a057600080fd5b81019080805190602001909291905050505060006104d28584306000808a815260200190815260200160002054610524565b90506104fa60016000808881526020019081526020016000205461058890919063ffffffff16565b6000808781526020019081526020016000208190555061051a8582610610565b9150509392505050565b600084848484604051602001808581526020018481526020018373ffffffffffffffffffffffffffffffffffffffff1681526020018281526020019450505050506040516020818303038152906040528051906020012060001c9050949350505050565b600080828401905083811015610606576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252601b8152602001807f536166654d6174683a206164646974696f6e206f766572666c6f77000000000081525060200191505060405180910390fd5b8091505092915050565b6000828260405160200180838152602001828152602001925050506040516020818303038152906040528051906020012090509291505056fe4e6f7420656e6f756768204c494e4b202d2066696c6c20636f6e7472616374207769746820666175636574a2646970667358221220980160ab1fb975495bcfb9dfe9f0368f0ea1167ca5debb729641455446fe5f5764736f6c634300060c0033",
   "immutableReferences": {
     "436": [
       {
         "length": 32,
-        "start": 452
+        "start": 457
       },
       {
         "length": 32,
-        "start": 814
+        "start": 819
       }
     ],
     "438": [
       {
         "length": 32,
-        "start": 240
+        "start": 245
       },
       {
         "length": 32,
-        "start": 874
+        "start": 879
       }
     ]
   },
-  "sourceMap": "194:1224:2:-:0;;;380:42;456;9179:15:4;9162:32;;;;;;;;;;;;9227:5;9201:32;;;;;;;;;;;;9096:143;;566:66:2::1;556:76;;:7;:76;;;;649:14;643:3;:20;;;;194:1224:::0;;;;;;;;;;;;;;;;",
-  "deployedSourceMap": "194:1224:2:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1328:87;;;:::i;:::-;;;;;;;;;;;;;;;;;;;296:21;;;:::i;:::-;;;;;;;;;;;;;;;;;;;9439:210:4;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;881:309:2;;;:::i;:::-;;;;;;;;;;;;;;;;;;;1328:87;1368:14;1328:87;:::o;296:21::-;;;;:::o;9439:210:4:-;9546:14;9532:28;;:10;:28;;;9524:72;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;9603:40;9621:9;9632:10;9603:17;:40::i;:::-;9439:210;;:::o;881:309:2:-;924:17;995:3;;962:4;:14;;;985:4;962:29;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:36;;954:92;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1057:12;1111;1101:23;1090:35;;;;;;;;;;;;;;;;;;;;;;;;;1080:46;;;;;;1072:55;;1057:70;;1145:37;1163:7;;1172:3;;1177:4;1145:17;:37::i;:::-;1138:44;;;881:309;:::o;1198:122::-;1302:10;1293:6;:19;;;;1198:122;;:::o;7559:1029:4:-;7656:17;7685:4;:20;;;7706:14;7722:4;7739:8;7749:5;7728:27;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;7685:71;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;7991:15;8010:66;8027:8;8037:5;8052:4;8059:6;:16;8066:8;8059:16;;;;;;;;;;;;8010;:66::i;:::-;7991:85;;8513:23;8534:1;8513:6;:16;8520:8;8513:16;;;;;;;;;;;;:20;;:23;;;;:::i;:::-;8494:6;:16;8501:8;8494:16;;;;;;;;;;;:42;;;;8550:32;8564:8;8574:7;8550:13;:32::i;:::-;8543:39;;;7559:1029;;;;;:::o;816:236:5:-;948:7;1004:8;1014:9;1025:10;1037:6;993:51;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;983:62;;;;;;975:71;;967:79;;816:236;;;;;;:::o;889:167:3:-;947:7;963:9;979:1;975;:5;963:17;;1000:1;995;:6;;987:46;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1049:1;1042:8;;;889:167;;;;:::o;1443:174:5:-;1536:7;1586:8;1596:13;1569:41;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1559:52;;;;;;1552:59;;1443:174;;;;:::o",
-  "source": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.6.0;\r\n\r\n/// @title Random Oracle\r\n/// @author Parzivalza\r\n/// @notice Seperate chainlink call contract \r\n\r\nimport \"./VRFConsumerBase.sol\";\r\n\r\ncontract Oracle is VRFConsumerBase {\r\n\r\n    bytes32 internal keyHash;\r\n    uint256 internal fee;\r\n    uint256 public Number;\r\n\r\n    constructor() \r\n        VRFConsumerBase(\r\n            0xb3dCcb4Cf7a26f6cf6B120Cf5A73875B7BBc655B, // VRF Coordinator\r\n            0x01BE23585060835E02B77ef475b0Cc51aA1e0709  // LINK Token\r\n        ) public payable\r\n    {\r\n        keyHash = 0x2ed0feb3e7fd2022120aa84fab1945545a9f2ffc9076fd6156fa96eaff4c1311;\r\n        fee = 0.1 * 10 ** 18; // 0.1 LINK\r\n    }\r\n\r\n    /// @notice Calls chainlink oracle for random numbers\r\n    /// @dev Make sure there is enough LINK on the contract for oracle call\r\n    /// @return requestId the call id for the oracle\r\n    function getRandomNumber() public returns (bytes32 requestId) {\r\n        require(LINK.balanceOf(address(this)) >= fee, \"Not enough LINK - fill contract with faucet\");\r\n        uint256 seed = uint256(keccak256(abi.encode(blockhash(block.number))));\r\n        return requestRandomness(keyHash, fee, seed);\r\n    }\r\n\r\n    function fulfillRandomness(bytes32 requestId, uint256 randomness) internal override {\r\n        Number = randomness;\r\n    }\r\n\r\n    function returnNumber() public returns (uint256 Number){\r\n        return Number;\r\n    }\r\n}",
+  "sourceMap": "194:1222:2:-:0;;;380:42;456;9179:15:4;9162:32;;;;;;;;;;;;9227:5;9201:32;;;;;;;;;;;;9096:143;;566:66:2::1;556:76;;:7;:76;;;;649:14;643:3;:20;;;;194:1222:::0;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "194:1222:2:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1328:85;;;:::i;:::-;;;;;;;;;;;;;;;;;;;296:21;;;:::i;:::-;;;;;;;;;;;;;;;;;;;9439:210:4;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;881:309:2;;;:::i;:::-;;;;;;;;;;;;;;;;;;;1328:85;1373:7;1399:6;;1392:13;;1328:85;:::o;296:21::-;;;;:::o;9439:210:4:-;9546:14;9532:28;;:10;:28;;;9524:72;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;9603:40;9621:9;9632:10;9603:17;:40::i;:::-;9439:210;;:::o;881:309:2:-;924:17;995:3;;962:4;:14;;;985:4;962:29;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:36;;954:92;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1057:12;1111;1101:23;1090:35;;;;;;;;;;;;;;;;;;;;;;;;;1080:46;;;;;;1072:55;;1057:70;;1145:37;1163:7;;1172:3;;1177:4;1145:17;:37::i;:::-;1138:44;;;881:309;:::o;1198:122::-;1302:10;1293:6;:19;;;;1198:122;;:::o;7559:1029:4:-;7656:17;7685:4;:20;;;7706:14;7722:4;7739:8;7749:5;7728:27;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;7685:71;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;7991:15;8010:66;8027:8;8037:5;8052:4;8059:6;:16;8066:8;8059:16;;;;;;;;;;;;8010;:66::i;:::-;7991:85;;8513:23;8534:1;8513:6;:16;8520:8;8513:16;;;;;;;;;;;;:20;;:23;;;;:::i;:::-;8494:6;:16;8501:8;8494:16;;;;;;;;;;;:42;;;;8550:32;8564:8;8574:7;8550:13;:32::i;:::-;8543:39;;;7559:1029;;;;;:::o;816:236:5:-;948:7;1004:8;1014:9;1025:10;1037:6;993:51;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;983:62;;;;;;975:71;;967:79;;816:236;;;;;;:::o;889:167:3:-;947:7;963:9;979:1;975;:5;963:17;;1000:1;995;:6;;987:46;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1049:1;1042:8;;;889:167;;;;:::o;1443:174:5:-;1536:7;1586:8;1596:13;1569:41;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1559:52;;;;;;1552:59;;1443:174;;;;:::o",
+  "source": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.6.0;\r\n\r\n/// @title Random Oracle\r\n/// @author Parzivalza\r\n/// @notice Seperate chainlink call contract \r\n\r\nimport \"./VRFConsumerBase.sol\";\r\n\r\ncontract Oracle is VRFConsumerBase {\r\n\r\n    bytes32 internal keyHash;\r\n    uint256 internal fee;\r\n    uint256 public Number;\r\n\r\n    constructor() \r\n        VRFConsumerBase(\r\n            0xb3dCcb4Cf7a26f6cf6B120Cf5A73875B7BBc655B, // VRF Coordinator\r\n            0x01BE23585060835E02B77ef475b0Cc51aA1e0709  // LINK Token\r\n        ) public payable\r\n    {\r\n        keyHash = 0x2ed0feb3e7fd2022120aa84fab1945545a9f2ffc9076fd6156fa96eaff4c1311;\r\n        fee = 0.1 * 10 ** 18; // 0.1 LINK\r\n    }\r\n\r\n    /// @notice Calls chainlink oracle for random numbers\r\n    /// @dev Make sure there is enough LINK on the contract for oracle call\r\n    /// @return requestId the call id for the oracle\r\n    function getRandomNumber() public returns (bytes32 requestId) {\r\n        require(LINK.balanceOf(address(this)) >= fee, \"Not enough LINK - fill contract with faucet\");\r\n        uint256 seed = uint256(keccak256(abi.encode(blockhash(block.number))));\r\n        return requestRandomness(keyHash, fee, seed);\r\n    }\r\n\r\n    function fulfillRandomness(bytes32 requestId, uint256 randomness) internal override {\r\n        Number = randomness;\r\n    }\r\n\r\n    function returnNumber() public view returns (uint256){\r\n        return Number;\r\n    }\r\n}",
   "sourcePath": "C:/Users/Lord R/Documents/GitHub/BC3_Jakob/PD-14/contracts/Oracle.sol",
   "ast": {
     "absolutePath": "/C/Users/Lord R/Documents/GitHub/BC3_Jakob/PD-14/contracts/Oracle.sol",
@@ -1281,7 +1282,7 @@
             "body": {
               "id": 219,
               "nodeType": "Block",
-              "src": "1383:32:2",
+              "src": "1381:32:2",
               "statements": [
                 {
                   "expression": {
@@ -1290,8 +1291,8 @@
                     "name": "Number",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 215,
-                    "src": "1401:6:2",
+                    "referencedDeclaration": 138,
+                    "src": "1399:6:2",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -1300,7 +1301,7 @@
                   "functionReturnParameters": 216,
                   "id": 218,
                   "nodeType": "Return",
-                  "src": "1394:13:2"
+                  "src": "1392:13:2"
                 }
               ]
             },
@@ -1327,11 +1328,11 @@
                   "constant": false,
                   "id": 215,
                   "mutability": "mutable",
-                  "name": "Number",
+                  "name": "",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
                   "scope": 220,
-                  "src": "1368:14:2",
+                  "src": "1373:7:2",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1342,7 +1343,7 @@
                     "id": 214,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1368:7:2",
+                    "src": "1373:7:2",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -1352,20 +1353,20 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1367:16:2"
+              "src": "1372:9:2"
             },
             "scope": 221,
-            "src": "1328:87:2",
-            "stateMutability": "nonpayable",
+            "src": "1328:85:2",
+            "stateMutability": "view",
             "virtual": false,
             "visibility": "public"
           }
         ],
         "scope": 222,
-        "src": "194:1224:2"
+        "src": "194:1222:2"
       }
     ],
-    "src": "33:1385:2"
+    "src": "33:1383:2"
   },
   "legacyAST": {
     "absolutePath": "/C/Users/Lord R/Documents/GitHub/BC3_Jakob/PD-14/contracts/Oracle.sol",
@@ -2553,7 +2554,7 @@
             "body": {
               "id": 219,
               "nodeType": "Block",
-              "src": "1383:32:2",
+              "src": "1381:32:2",
               "statements": [
                 {
                   "expression": {
@@ -2562,8 +2563,8 @@
                     "name": "Number",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 215,
-                    "src": "1401:6:2",
+                    "referencedDeclaration": 138,
+                    "src": "1399:6:2",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -2572,7 +2573,7 @@
                   "functionReturnParameters": 216,
                   "id": 218,
                   "nodeType": "Return",
-                  "src": "1394:13:2"
+                  "src": "1392:13:2"
                 }
               ]
             },
@@ -2599,11 +2600,11 @@
                   "constant": false,
                   "id": 215,
                   "mutability": "mutable",
-                  "name": "Number",
+                  "name": "",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
                   "scope": 220,
-                  "src": "1368:14:2",
+                  "src": "1373:7:2",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -2614,7 +2615,7 @@
                     "id": 214,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1368:7:2",
+                    "src": "1373:7:2",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -2624,20 +2625,20 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1367:16:2"
+              "src": "1372:9:2"
             },
             "scope": 221,
-            "src": "1328:87:2",
-            "stateMutability": "nonpayable",
+            "src": "1328:85:2",
+            "stateMutability": "view",
             "virtual": false,
             "visibility": "public"
           }
         ],
         "scope": 222,
-        "src": "194:1224:2"
+        "src": "194:1222:2"
       }
     ],
-    "src": "33:1385:2"
+    "src": "33:1383:2"
   },
   "compiler": {
     "name": "solc",
@@ -2647,12 +2648,12 @@
     "4": {
       "events": {},
       "links": {},
-      "address": "0x612F192Eb36AeD8e8a1552940833951F43A6E36D",
-      "transactionHash": "0x99cc1c147189e31744100b0a932e3091f03c96b2eb2b506785bc6c5c9b9ff172"
+      "address": "0xa820C1Edf6ac10C2ea7ff47422C3aB4498728E9a",
+      "transactionHash": "0xff4186c1d25205c619c515cab37a6afb94c1f84f9ade47bc0513b2337c4714fd"
     }
   },
   "schemaVersion": "3.3.2",
-  "updatedAt": "2021-01-14T10:15:23.953Z",
+  "updatedAt": "2021-01-15T10:14:43.559Z",
   "networkType": "ethereum",
   "devdoc": {
     "kind": "dev",

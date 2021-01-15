@@ -36,7 +36,7 @@ contract Oracle is VRFConsumerBase {
         Number = randomness;
     }
 
-    function returnNumber() public returns (uint256 Number){
+    function returnNumber() public view returns (uint256){
         return Number;
     }
 }

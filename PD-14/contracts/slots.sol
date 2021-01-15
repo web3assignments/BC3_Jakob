@@ -27,7 +27,7 @@ contract Slots is Ownable {
         return o.getRandomNumber();
     }
 
-    function ReturnOracleNumber() public returns (uint256){
+    function ReturnOracleNumber() internal view returns (uint256){
         Oracle2 o = Oracle2(OracleAdress);
         return o.returnNumber();  
     }
@@ -152,5 +152,5 @@ contract Slots is Ownable {
 
 interface Oracle2{
     function getRandomNumber() external returns (bytes32);
-    function returnNumber() external returns (uint256);
+    function returnNumber() external view returns (uint256);
 }

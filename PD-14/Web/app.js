@@ -102,19 +102,6 @@ const SlotsAbi=[
 	},
 	{
 		"inputs": [],
-		"name": "ReturnOracleNumber",
-		"outputs": [
-			{
-				"internalType": "uint256",
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [],
 		"name": "StartGame",
 		"outputs": [],
 		"stateMutability": "payable",
@@ -212,11 +199,12 @@ async function Play(){
     var betAmount = document.getElementById("bet").value;
     var betAmountWei = web3.utils.toWei(betAmount);
     logEvents(`Betting: ${Round(betAmount)} ETH`);
-    var result =  await SlotsContract.methods.StartGame().send({from: accounts[0], value:betAmountWei});
+	var result =  await SlotsContract.methods.StartGame().send({from: accounts[0], value:betAmountWei});
+	UpdateBalances();
     var gasprice= await web3.eth.getGasPrice()   
 	var Numbers = await SlotsContract.methods.getNumbers().call({from: accounts[0]});
 	logEvents(`Your numbers this spin: ${Numbers}`);
-	
+	UpdateBalances();
 	
     logEvents(`Gas used: ${Round(web3.utils.fromWei( (result.gasUsed*gasprice).toString(), 'ether'))} ETH`);    
     var win = result.events.Won.returnValues['win'];
@@ -225,7 +213,7 @@ async function Play(){
         logEvents(`You won: ${winAmount} ETH!`);
     else
 		logEvents(`You lost: ${betAmount} ETH, but thats life!`);
-	
+
 	document.querySelector('#play').style.visibility = "hidden";
 	document.querySelector('#GRN').style.visibility = "block";
 }
@@ -233,15 +221,22 @@ async function Play(){
 async function getNumber() {
 	const SlotsContract = new web3.eth.Contract(SlotsAbi, Slotsaddress);
 	var test = await SlotsContract.methods.CallOracle().send({from: accounts[0]});
-	logEvents('Wait 2 minutes on the oracle call! Be patient!');
-	await new Promise(r => setTimeout(r, 1000));
-	console.log(test.logsBloom);
-	var number = await SlotsContract.methods.alterNumbers().send({from: accounts[0]});
-	logEvents(`Your by oracle returned number: ${number}`);
-	console.log(number);
+	logEvents('Wait 1 minute on the oracle call! Be patient!');
+	await new Promise(r => setTimeout(r, 60000));
+	logEvents(`Your oracle returned a number! Please let us do some backend magic on it!`);
+	await SlotsContract.methods.alterNumbers().send({from: accounts[0]});
 	document.querySelector('#play').style.visibility = "block";
 	document.querySelector('#GRN').style.visibility = "hidden";
 	logEvents(`You can spin the wheels now!`)
+}
+
+async function UpdateBalances(){
+	var weiBalance= await web3.eth.getBalance(accounts[0])
+	var ethBalance = web3.utils.fromWei(weiBalance, 'ether');
+	document.getElementById("balance").value = Round(ethBalance).toString();    
+	
+	var weiBankBalance=await web3.eth.getBalance(Slotsaddress)
+	document.getElementById("bank").value = Round(web3.utils.fromWei(weiBankBalance, 'ether')); 
 }
 
 async function asyncloaded() {
@@ -255,13 +250,7 @@ async function asyncloaded() {
 		accounts=await web3.eth.getAccounts(); 
 		const name = "decentralizedslots.eth";
 		Slotsaddress = await web3.eth.ens.getAddress(name);  
-		
-		var weiBalance= await web3.eth.getBalance(accounts[0])
-		var ethBalance = web3.utils.fromWei(weiBalance, 'ether');
-		document.getElementById("balance").value = Round(ethBalance).toString();    
-	
-		var weiBankBalance=await web3.eth.getBalance(Slotsaddress)
-		document.getElementById("bank").value = Round(web3.utils.fromWei(weiBankBalance, 'ether'));  
+		UpdateBalances();
 		logEvents("-------------------------");      
 		
 	}     

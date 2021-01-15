@@ -47,6 +47,11 @@
     float:right;
 }
 
+#Beta{
+    position: relative;
+    margin-left: 25%;
+}
+
 #Slots{
     justify-content: center;
     border: 5px solid purple;  
