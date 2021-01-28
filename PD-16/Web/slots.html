@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://unpkg.com/web3@latest/dist/web3.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<html>
+<body>
+<main>
+<div class="logo">
+    <img src="Images/slotslogo.png" id='Logo'>
+</div>
+<div class="main">
+    <div class="imain">
+        <div class="SlotsContent">
+            <section id='Slots'>
+                <img id="slot1" src="Images\seven.png" alt="">
+                <img id="slot2" src="images\seven.png" alt="">
+                <img id="slot3" src="images\seven.png" alt="">
+            </section>
+            <div class="wrapper">
+                <input type="button" id="play" value="Spin Now!" onclick="Play()"/>
+                <input type="button" id="GRN" value="Get Random Number!" onclick="getNumber()"/>
+                <img src="Images/load.gif" id='gif' style="width:100px;height:100px;">
+            </div>
+        </div>
+    </div>
+
+    <div class="betinfo">
+        <p><img src="./Images/balance.png" id="p1">
+        <input type="text" name="balance" id="balance" placeholder="ETH" /></p> 
+        <p><img src="./Images/bank.png" id="p2">
+        <input type="text" name="bank" id="bank" placeholder="ETH" /></p>
+        <p><img src="Images/Beta.png" id="Beta"></p>
+        <p><img src="./Images/bet.png" id="p3">
+        <input type="number" min="0" name="bet" id="bet" placeholder="ETH" /></p> 
+    </div>
+
+    <div class='info'>
+        <section id="informatie">
+            <pre id="log"></pre> 
+            <pre id="log2"></pre> 
+        </section>
+    </div>
+
+</div>    
+</main>
+</body>
+<footer>
+    <img src="Images/betinfo.png" id='Betodds'>
+    <div id='credits'>© 2021 Decentralized slotmachine, @Parzivalza.</div>
+</footer>
+
+
+<script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+<script type="text/javascript" src="app.js"></script>
+</html>
